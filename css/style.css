@@ -1,3 +1,4 @@
+/* Estilos Gerais */
 * {
     margin: 0;
     padding: 0;
@@ -16,6 +17,7 @@ body {
     padding: 0 20px;
 }
 
+/* Navegação */
 .navbar {
     position: fixed;
     top: 0;
@@ -63,6 +65,7 @@ body {
     color: #89CFF0;
 }
 
+/* Hero Section */
 .hero {
     height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/igrejinha.jpg');
@@ -90,6 +93,7 @@ body {
     animation: fadeInUp 1s ease 0.5s forwards;
 }
 
+/* Biografia Section */
 .biografia {
     padding: 100px 0;
     background-color: #f9f9f9;
@@ -131,6 +135,7 @@ body {
     transition: transform 0.35s ease;
 }
 
+/* Vídeos Section */
 .videos {
     padding: 100px 0;
 }
@@ -164,8 +169,9 @@ body {
     height: 100%;
 }
 
+/* Estilo minimalista para a seção de vídeos */
 .videos {
-    background-color: #f9f9f9;
+    background-color: #f9f9f9; /* mesma tonalidade usada em outras seções minimalistas */
 }
 
 .video-grid {
@@ -181,7 +187,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 12px;
-    border-left: 4px solid #89CFF0;
+    border-left: 4px solid #89CFF0; /* faixa de destaque igual à citação/biografia */
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
@@ -219,6 +225,7 @@ body {
     }
 }
 
+/* Contato Section */
 .contato {
     position: relative;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/mossico1.JPEG');
@@ -243,28 +250,32 @@ body {
 
 .contato-frase {
     text-align: center;
-    font-size: 2.2em;
-    color: #ffffff;
+    font-size: 2.2em; /* tamanho similar ao estilo do hero */
+    color: #ffffff; /* texto branco, como no hero */
     font-family: 'Playfair Display', serif;
     font-weight: 400;
     margin-bottom: 32px;
-    background: transparent;
-    padding: 0;
+    background: transparent; /* sem fundo para ficar igual ao hero */
+    padding: 0; /* removido padding com fundo */
     border-radius: 0;
     box-shadow: none;
-    text-shadow: 0 8px 20px rgba(0,0,0,0.45);
-    opacity: 0;
+    text-shadow: 0 8px 20px rgba(0,0,0,0.45); /* ajuda a leitura sobre a foto */
+    opacity: 0; /* início para animação */
     animation: fadeInUp 1s ease forwards;
     animation-delay: 0.25s;
 }
 
+/* Seção de Citação */
 .citacao {
     padding: 100px 0;
     position: relative;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url('../images/background.png');
+    /* overlay sutil e imagem de fundo */
+    background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)),
+                     url('../images/background.png');
     background-size: cover;
     background-position: center;
     color: #222;
+    /* ocupar o espaço restante da viewport considerando a altura do footer */
     min-height: calc(100vh - var(--footer-height, 110px));
     display: flex;
     align-items: center;
@@ -342,9 +353,10 @@ cite {
         padding-left: 0;
         border-left: none;
         padding-top: 20px;
-        border-top: 3px solid #89CFF0;
+    border-top: 3px solid #89CFF0;
     }
 
+    /* Biografia responsiva: mesma linguagem minimalista */
     .bio-content {
         flex-direction: column;
         gap: 30px;
@@ -365,20 +377,19 @@ cite {
     .bio-texto {
         padding-left: 0;
         border-left: none;
-        border-top: 3px solid #89CFF0;
+    border-top: 3px solid #89CFF0;
         padding-top: 18px;
         margin-top: 8px;
     }
 
 }
-
 .contact-btn {
     display: inline-block;
     text-decoration: none;
     font-size: 1.2em;
     padding: 20px 40px;
     margin-top: 20px;
-    background-color: #25D366;
+    background-color: #25D366;  /* Cor oficial do WhatsApp */
     color: white;
     border-radius: 50px;
     transition: all 0.3s ease;
@@ -393,7 +404,7 @@ cite {
 .contact-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
-    background-color: #128C7E;
+    background-color: #128C7E;  /
 }
 
 .btn {
@@ -416,6 +427,7 @@ cite {
     background-color: #8e44ad;
 }
 
+/* Footer */
 footer {
     background-color: #333;
     color: white;
@@ -450,6 +462,7 @@ footer {
     color: #89CFF0;
 }
 
+/* Animações */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -461,6 +474,7 @@ footer {
     }
 }
 
+/* Media Queries */
 @media (max-width: 768px) {
     .quote-section {
         flex-direction: column;
@@ -485,8 +499,9 @@ footer {
         margin: 0 0 10px 0;
     }
     
+    /* Menu móvel: usar visibilidade/opacidade/transform para animação suave */
     .nav-links {
-        display: block;
+        display: block; /* permanece no fluxo visualmente via visibility/opacity */
         position: absolute;
         top: 100%;
         left: 0;
@@ -529,7 +544,7 @@ footer {
     @media (max-width: 768px) {
         .menu-toggle {
             display: block;
-            position: absolute;
+            position: absolute; /* posiciona dentro da navbar */
             right: 26px;
             top: 50%;
             transform: translateY(-50%);
@@ -566,6 +581,7 @@ footer {
             bottom: 0;
         }
 
+        /* Animação do menu quando ativo */
         .menu-toggle.active span:nth-child(1) {
             top: 50%;
             transform: translateY(-50%) rotate(45deg);
@@ -580,6 +596,7 @@ footer {
             transform: translateY(50%) rotate(-45deg);
         }
 
+        /* Ajustes de posicionamento responsivo */
         @media (max-width: 360px) {
             .menu-toggle {
                 right: 18px;
@@ -590,6 +607,7 @@ footer {
             }
         }
 
+        /* Prevenção de overflow */
         .navbar {
             position: fixed;
             width: 100%;
@@ -602,14 +620,15 @@ footer {
         }
 
         .logo {
-            padding-right: 40px;
-            max-width: calc(100% - 50px);
+            padding-right: 40px; /* Espaço para o botão do menu */
+            max-width: calc(100% - 50px); /* Evita sobreposição com o botão */
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
         }
 
         .nav-links {
+            /* full-screen overlay but hidden by default using opacity/visibility to animate */
             display: flex;
             position: fixed;
             top: 0;
@@ -688,6 +707,7 @@ footer {
         height: 300px;
     }
 
+    /* Ajuste da frase no contato para telas menores */
     .contato-frase {
         font-size: 1.4em;
         text-shadow: 0 6px 16px rgba(0,0,0,0.45);
@@ -695,10 +715,12 @@ footer {
     }
 }
 
+/* Footer Styles */
 .footer {
     position: relative;
     background-color: #ffffff;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url('../images/background.png');
+    background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)),
+                     url('../images/background.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -762,7 +784,7 @@ footer {
 
 .center-developer {
     display: inline-flex;
-    flex-direction: row;
+    flex-direction: row; 
     align-items: center;
     text-decoration: none;
     color: inherit;
@@ -777,10 +799,10 @@ footer {
 .center-developer-mark {
     width: 48px;
     height: 48px;
-    border-radius: 50%;
-    background-color: transparent;
-    padding: 0;
-    box-shadow: none;
+    border-radius: 50%; 
+    background-color: transparent; 
+    padding: 0; 
+    box-shadow: none; 
     object-fit: cover;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -851,7 +873,9 @@ footer {
     transform: translateY(-2px);
 }
 
+/* Responsive Adjustments */
 @media (max-width: 768px) {
+    /* Container e seções */
     .container {
         padding: 0 15px;
         max-width: 100%;
@@ -861,11 +885,13 @@ footer {
         padding: 60px 0;
     }
 
+    /* Ajustes de texto */
     h2 {
         font-size: 2em;
         margin-bottom: 30px;
     }
 
+    /* Bio section */
     .bio-content {
         flex-direction: column;
         gap: 30px;
@@ -883,6 +909,7 @@ footer {
         margin: 0 auto;
     }
 
+    /* Quote section */
     .quote-section {
         flex-direction: column;
         gap: 30px;
@@ -910,6 +937,7 @@ footer {
         padding: 0 15px;
     }
 
+    /* Footer adjustments (compact) */
     .footer-grid {
         flex-direction: column;
         align-items: center;
@@ -943,6 +971,7 @@ footer {
         margin-top: 12px;
     }
 
+    /* Contato ajustes */
     .contato {
         text-align: center;
         padding: 60px 15px;
@@ -955,6 +984,7 @@ footer {
     }
 }
 
+/* Ajustes para telas muito pequenas */
 @media (max-width: 480px) {
     .hero-content h1 {
         font-size: 2.5em;
@@ -996,8 +1026,10 @@ footer {
     }
 }
 
+/* Overrides para garantir botão do menu sempre visível e dentro da tela */
 .menu-toggle {
-    position: absolute !important;
+    position: absolute !important; /* posiciona relativamente à navbar fixa */
+   
     top: 50% !important;
     transform: translateY(-50%) !important;
     z-index: 11000 !important;
@@ -1013,11 +1045,13 @@ footer {
     }
 }
 
+/* Garante que o logo não ultrapasse e empurre o botão */
 .navbar .logo {
     margin-left: 16px;
     max-width: calc(100% - 80px);
 }
 
+/* Remove possível overflow horizontal causado pelo menu */
 html, body {
     overflow-x: hidden;
 }
