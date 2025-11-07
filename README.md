@@ -54,4 +54,4 @@ Para entrar em contato com a Talía:
 
 ## 🔧 Desenvolvimento
 
-Site desenvolvido por [Re1st](https://www.linkedin.com/company/re1st-tec/)
+Site desenvolvido por [Re1st Tech](https://www.re1st.site/)
